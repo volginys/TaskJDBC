@@ -51,8 +51,6 @@ public class UserDaoHibernateImpl extends HibernateUtil implements UserDao {
 
         openTransactionSession();
 
-        Session session = getSession();
-        session.save(new User(name, lastName, age));
         System.out.println("User с именем"+name+" добавлен в базу данных");
 
         closeTransactionSession();

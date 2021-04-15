@@ -11,8 +11,7 @@ public class Util {
     private static final String DB_USERNAME = "root";
     private static final String DB_PASSWORD = "eoot";
 
-
-    public Connection getConnection() {
+    public static Connection getConnection() {
 
         Connection connection =null;
 
@@ -20,7 +19,6 @@ public class Util {
 
             Class.forName(DB_Driver);
             connection = DriverManager.getConnection(DB_URL, DB_USERNAME, DB_PASSWORD);
-
             connection.setAutoCommit(false);
 
             System.out.println("Connection done...");
